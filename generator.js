@@ -1207,8 +1207,9 @@ function create_xy_paths(samplecount) {
 }
 
 function update_sound_buffer() {
-    const samples = audioCtx.sampleRate / 20;
-    const myArrayBuffer = audioCtx.createBuffer(2, samples, audioCtx.sampleRate);
+	const framerate = 60; // 60 hz refresh rate
+    const samples = audioCtx.sampleRate / (framerate - 1); // the equation divides (samples per second) by Frequency (frames per sec) to get the period for each sample (sec). Measured freq is always 1 Hz too high, so the variable gets adjusted for accurate results
+    const myArrayBuffer = audioCtx.createBuffer(2, samples, audioCtx.sampleRate); //audioCtx.sampleRate is in samples per second
     const path_data = create_xy_paths(samples);
     myArrayBuffer.copyToChannel(path_data[0],0);
 	myArrayBuffer.copyToChannel(path_data[1],1);
