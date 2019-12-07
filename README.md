@@ -1,12 +1,10 @@
 # 36c3 Generator
-Generative Artwork for 36th Chaos Communication Congress  
-Generative Artwork for 36th Chaos Communication Congress  
-Generative Artwork for 36th Chaos Communication Congress  
+Generative Artwork for 36th Chaos Communication Congress   
 
 
 [Original live version](https://36c3.bleeptrack.de)  
-[Live version with sound synthesis](https://quantenprojects.github.io/36c3-generator/)__
-[Live version with adjustable frequency (WIP)](https://chuckthegecko.github.io/36c3-generator/)_
+[QuantenProject's Live version with sound synthesis](https://quantenprojects.github.io/36c3-generator/)__
+[ChuckTheGecko's Live version with adjustable frequency (WIP)](https://chuckthegecko.github.io/36c3-generator/)_
 
 Change the framerate variable with Chrome Dev Tools: Sources -> generator.js -> search: const framerate.
 Preview changes by setting an Overrides directory in the left sidebar's "Overrides" tab, and then choose "Save for overrides" via right click on the changed js file. The change becomes active on stop/restart of "Play Sound"
